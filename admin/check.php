@@ -15,7 +15,8 @@ if ($_POST['login'] == ADMIN_LOGIN AND $_POST['password'] == ADMIN_PASSWORD) {
     header('Location: index.html.php');
     exit();
 } else {
-    echo "not ok";
+    header(('Location: log.html.php?error=1'));
+    exit();
 }
 
 

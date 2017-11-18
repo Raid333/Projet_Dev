@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="admincss.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>admin login</title>
 </head>
 <body>
@@ -66,20 +69,31 @@ if (isset($_SESSION['login'])) {
             <div class="form-login">
                 <h4>Connexion ADMIN</h4>
                 <form action="check.php" method="post">
-                <input type="text" id="userName" class="form-control input-sm chat-input" name="login" placeholder="Identifiant" required/>
-                </br>
-                <input type="password" id="userPassword" class="form-control input-sm chat-input" name="password" placeholder="Mot de passe" required/>
-                </br>
-                <div class="wrapper">
+                    <?php if (isset($_GET['error']) == 1 ) { echo '<p class="text-danger text-center">Identifiant / Mot de passe incorrect !</p>';}
+                    else if (isset($_GET['error']) == 2) { echo '<p class="text-danger text-center">Veuillez bien rentrer votre Identifiant / Mot de passe !</p>';}
+                    ?>
+                    <input type="text" id="userName" class="form-control input-sm chat-input" name="login"
+                           placeholder="Identifiant" required/>
+                    </br>
+                    <input type="password" id="userPassword" class="form-control input-sm chat-input" name="password"
+                           placeholder="Mot de passe" required/>
+                    </br>
+                    <div class="wrapper">
             <span class="group-btn">
-                <button type="submit" class="btn btn-primary btn-md">login <i class="fa fa-sign-in"></i></button>
+                <button type="submit" class="btn btn-primary btn-md">Login <i class="fa fa-sign-in"></i></button>
             </span>
                 </form>
-                </div>
             </div>
-
         </div>
+
     </div>
+</div>
+<footer class="pull-left footer">
+    <p class="col-md-12">
+    <hr class="divider">
+    Copyright &COPY; 2017 - Page admin | site événementiel
+    </p>
+</footer>
 </div>
 </body>
 </html>
