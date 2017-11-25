@@ -12,7 +12,7 @@ if (!isset($_SESSION['login'])) {
         <ul class="nav nav-pills nav-stacked">
             <li class="active"><a href="?status=all">Toutes les demandes</a></li>
             <li><a href="?status=pending">En attentes de validation</a></li>
-            <li><a href="?status=valid">Validés</a></li>
+            <li><a href="?status=valid">Validé</a></li>
             <li><a href="?status=refuse">Refusés</a></li>
         </ul>
     </div>
@@ -25,29 +25,59 @@ if (!isset($_SESSION['login'])) {
                 <?php
                 switch ($listing) {
                     case 'all':
-                        $sql = "SELECT * FROM utilisateurs";
+                        $sql = "SELECT * FROM utilisateurs ORDER BY dateInsci";
                         $prep = $pdo->prepare($sql);
                         $prep->execute();
                         echo "<table class='table table-hover'>";
-                        echo "<tr><th>Nom</th><th>Prénom</th><th>Adresse</th></tr>";
+                        echo "<tr><th>Nom</th><th>Prénom</th><th>Adresse</th><th>Date d'inscription</th><th>Actions</th></tr>";
                         while ($donnee = $prep->fetch()) {
-                            switch ($donnee['validation']){
+                            switch ($donnee['validation']) {
                                 case 0:
-                                    $status='warning';
+                                    $status = 'warning';
                                     break;
                                 case 1:
-                                    $status='success';
+                                    $status = 'success';
                                     break;
                                 case 2:
-                                    $status='danger';
+                                    $status = 'danger';
                                     break;
                             }
-                            echo "<tr class='$status'><td>". $donnee['nom'] . "</td><td>". $donnee['prenom'] . "</td><td>" . $donnee['adresse'] . "</td><td><a href='action.php?status=1&id=".$donnee['id']."'>Valider</a></td><td><a href='action.php?status=2&id=".$donnee['id']."'>Refuser</a></td></tr>";
+                            echo "<tr class='$status' data-toggle='modal' data-target='.modal".$donnee['id']."'><td>" . $donnee['nom'] . "</td><td>" . $donnee['prenom'] . "</td><td>" . $donnee['adresse'] . "</td><td>" . $donnee['dateInsci'] . "</td><td><a href='action.php?status=1&id=" . $donnee['id'] . "'>Valider</a> <a href='action.php?status=2&id=" . $donnee['id'] . "'>Refuser</a></td></tr>";
+                            echo "<div class=\"modal fade modal".$donnee['id']."\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myLargeModalLabel\">
+                                  <div class=\"modal-dialog modal-lg\" role=\"document\">
+                                    <div class=\"modal-content\">
+                                    <div class=\"modal-header\">
+                                    <h4 class=\"modal-title\">Modification : ".$donnee['nom']." ". $donnee['prenom']."</h4>
+                                      </div>
+                                      <div class=\"modal-body\">
+                                        <form>
+                                              <div class=\"form-group\">
+                                                <label for=\"recipient-name\" class=\"control-label\">Adresse :</label>
+                                                <input type=\"text\" class=\"form-control\" id=\"recipient-name\" value=".$donnee['adresse'].">
+                                              </div>
+                                              <div class=\"form-group\">
+                                                <label for=\"recipient-name\" class=\"control-label\">Ville :</label>
+                                                <input type=\"text\" class=\"form-control\" id=\"recipient-name\" value=".$donnee['ville'].">
+                                              </div>
+                                              <div class=\"form-group\">
+                                                <label for=\"recipient-name\" class=\"control-label\">E-mail :</label>
+                                                <input type=\"text\" class=\"form-control\" id=\"recipient-name\" value=".$donnee['email'].">
+                                              </div>
+                                            </form>
+                                      </div>
+                                      <div class=\"modal-footer\">
+                                         <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Fermer</button>
+                                         <button type=\"button\" class=\"btn btn-primary\">Sauvegarder</button>
+                                     </div>
+                                    </div>
+                                  </div>
+                                </div>";
                         }
                         echo '</table>';
+
                         break;
                     case 'pending':
-                        $sql = "SELECT * FROM utilisateurs WHERE validation = 0";
+                        $sql = "SELECT * FROM utilisateurs WHERE validation = 0 ORDER BY dateInsci";
                         $prep = $pdo->prepare($sql);
                         $prep->execute();
                         while ($donnee = $prep->fetch()) {
@@ -55,7 +85,7 @@ if (!isset($_SESSION['login'])) {
                         }
                         break;
                     case 'valid':
-                        $sql = "SELECT * FROM utilisateurs WHERE validation = 1";
+                        $sql = "SELECT * FROM utilisateurs WHERE validation = 1 ORDER BY dateInsci";
                         $prep = $pdo->prepare($sql);
                         $prep->execute();
                         while ($donnee = $prep->fetch()) {
@@ -63,7 +93,7 @@ if (!isset($_SESSION['login'])) {
                         }
                         break;
                     case 'refuse':
-                        $sql = "SELECT * FROM utilisateurs WHERE validation = 2";
+                        $sql = "SELECT * FROM utilisateurs WHERE validation = 2 ORDER BY dateInsci";
                         $prep = $pdo->prepare($sql);
                         $prep->execute();
                         while ($donnee = $prep->fetch()) {
@@ -71,24 +101,25 @@ if (!isset($_SESSION['login'])) {
                         }
                         break;
                     default:
-                        $sql = "SELECT * FROM utilisateurs";
+
+                        $sql = "SELECT * FROM utilisateurs ORDER BY dateInsci";
                         $prep = $pdo->prepare($sql);
                         $prep->execute();
                         echo "<table class='table table-hover'>";
                         echo "<tr><th>Nom</th><th>Prénom</th><th>Adresse</th></tr>";
                         while ($donnee = $prep->fetch()) {
-                            switch ($donnee['validation']){
+                            switch ($donnee['validation']) {
                                 case 0:
-                                    $status='warning';
+                                    $status = 'warning';
                                     break;
                                 case 1:
-                                    $status='success';
+                                    $status = 'success';
                                     break;
                                 case 2:
-                                    $status='danger';
+                                    $status = 'danger';
                                     break;
                             }
-                            echo "<tr class='$status'><td>". $donnee['nom'] . "</td><td>". $donnee['prenom'] . "</td><td>" . $donnee['adresse'] . "</td><td><a href='action.php?status=1&id=".$donnee['id']."'>Valider</a></td><td><a href='action.php?status=2&id=".$donnee['id']."'>Refuser</a></td></tr>";
+                            echo "<tr class='$status'><td>" . $donnee['nom'] . "</td><td>" . $donnee['prenom'] . "</td><td>" . $donnee['adresse'] . "</td><td><a href='action.php?status=1&id=" . $donnee['id'] . "'>Valider</a></td><td><a href='action.php?status=2&id=" . $donnee['id'] . "'>Refuser</a></td></tr>";
                         }
                         echo '</table>';
                         break;
