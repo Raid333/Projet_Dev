@@ -11,6 +11,7 @@
     <title>Dashboard admin</title>
 </head>
 <body>
+<?php include ('pdo.php'); ?>
 <nav class="navbar navbar-default navbar-static-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
