@@ -42,32 +42,33 @@ if (!isset($_SESSION['login'])) {
                                     $status = 'danger';
                                     break;
                             }
-                            echo "<tr class='$status' data-toggle='modal' data-target='.modal".$donnee['id']."'><td>" . $donnee['nom'] . "</td><td>" . $donnee['prenom'] . "</td><td>" . $donnee['adresse'] . "</td><td>" . $donnee['dateInsci'] . "</td><td><a href='action.php?status=1&id=" . $donnee['id'] . "'>Valider</a> <a href='action.php?status=2&id=" . $donnee['id'] . "'>Refuser</a></td></tr>";
+                            echo "<tr class='$status' data-toggle='modal' data-target='.modal".$donnee['id']."'><td>" . $donnee['nom'] . "</td><td>" . $donnee['prenom'] . "</td><td>" . $donnee['adresse'] . "</td><td>" . $donnee['dateInsci'] . "</td><td><a href='traitement/action.php?status=1&id=" . $donnee['id'] . "'>Valider</a> <a href='traitement/action.php?status=2&id=" . $donnee['id'] . "'>Refuser</a></td></tr>";
                             echo "<div class=\"modal fade modal".$donnee['id']."\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myLargeModalLabel\">
                                   <div class=\"modal-dialog modal-lg\" role=\"document\">
                                     <div class=\"modal-content\">
                                     <div class=\"modal-header\">
-                                    <h4 class=\"modal-title\">Modification : ".$donnee['nom']." ". $donnee['prenom']."</h4>
+                                    <h4 class=\"modal-title\">Modification : ".$donnee['nom']." ". $donnee['prenom']."</h4>   
                                       </div>
                                       <div class=\"modal-body\">
-                                        <form>
+                                        <form method='post' action='traitement/modifCdt.php'>
                                               <div class=\"form-group\">
                                                 <label for=\"recipient-name\" class=\"control-label\">Adresse :</label>
-                                                <input type=\"text\" class=\"form-control\" id=\"recipient-name\" value=".$donnee['adresse'].">
+                                                <input type=\"text\" name='adresse' class=\"form-control\" id=\"recipient-name\" value='".$donnee['adresse']."'>
                                               </div>
                                               <div class=\"form-group\">
                                                 <label for=\"recipient-name\" class=\"control-label\">Ville :</label>
-                                                <input type=\"text\" class=\"form-control\" id=\"recipient-name\" value=".$donnee['ville'].">
+                                                <input type=\"text\" name='ville' class=\"form-control\" id=\"recipient-name\" value='".$donnee['ville']."'>
                                               </div>
                                               <div class=\"form-group\">
                                                 <label for=\"recipient-name\" class=\"control-label\">E-mail :</label>
-                                                <input type=\"text\" class=\"form-control\" id=\"recipient-name\" value=".$donnee['email'].">
+                                                <input type=\"text\" name='email' class=\"form-control\" id=\"recipient-name\" value='".$donnee['email']."'>
+                                                <input type='hidden' name='id' value='".$donnee['id']."'>
                                               </div>
-                                            </form>
                                       </div>
                                       <div class=\"modal-footer\">
                                          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Fermer</button>
-                                         <button type=\"button\" class=\"btn btn-primary\">Sauvegarder</button>
+                                         <button type=\"submit\" class=\"btn btn-primary\">Sauvegarder</button>
+                                         </form>
                                      </div>
                                     </div>
                                   </div>

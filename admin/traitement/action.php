@@ -6,7 +6,7 @@
  * Time: 17:59
  */
 session_start();
-include ('includes/pdo.php');
+include('../includes/pdo.php');
 
 $query = "UPDATE utilisateurs SET validation = :status WHERE id = :id";
 $prep = $pdo->prepare($query);
@@ -15,5 +15,5 @@ $prep->bindValue(':status', $_GET['status'], PDO::PARAM_INT);
 $prep->execute();
 
 
-header('Location: index.html.php');
+header('Location: ../index.html.php');
 exit();
