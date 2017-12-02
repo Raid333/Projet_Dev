@@ -19,7 +19,7 @@ include('modeleUtilisateurs.php');
         <li class='<?php if ($_GET['status'] == "2"){echo "active";}?>'><a href="?status=2">Refusés</a></li>
     </ul>
 </div>
-<div class="col-md-10 content">
+    <div class="col-md-10 content">
     <div class="panel panel-default">
         <div class="panel-heading">
 
@@ -27,13 +27,13 @@ include('modeleUtilisateurs.php');
         <div class="panel-body">
             <?php
 
-            $valide = $_GET['status'];
+            if (isset($_GET['status'])){$valide = $_GET['status'];} else {$valide="";}
             $utilisateurs = getUtilisateurs($valide);
             echo "<table class='table table-hover'>
                     <tr><th>Nom</th><th>Prénom</th><th>Adresse</th><th>Date d'inscription</th><th>Actions</th></tr>";
             foreach ($utilisateurs as $utilisateur) {
                 $couleur = getCouleur($utilisateur['validation']);
-                echo "<tr class='$couleur'><td>" . $utilisateur['nom'] . "</td><td>" . $utilisateur['prenom'] . "</td><td>" . $utilisateur['adresse'] . "</td><td>" . $utilisateur['dateInsci'] . "</td><td ><a href='traitement/action.php?status=1&id=" . $utilisateur['id'] . "'><i class=\"fa fa-check\" aria-hidden=\"true\"></i></a> <a href='traitement/action.php?status=2&id=" . $utilisateur['id'] . "'><i class=\"fa fa-times\" aria-hidden=\"true\"></i></a><a href='infosUtilisateur.html.php?id= ". $utilisateur['id'] . "'> <i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></a></td></tr>";
+                echo "<tr class='$couleur'><td>" . $utilisateur['nom'] . "</td><td>" . $utilisateur['prenom'] . "</td><td>" . $utilisateur['adresse'] . "</td><td>" . $utilisateur['dateInsci'] . "</td><td ><a href='traitement/action.php?status=1&id=" . $utilisateur['id'] . "'><i class=\"fa fa-lg fa-check\" aria-hidden=\"true\"></i></a> <a href='traitement/action.php?status=2&id=" . $utilisateur['id'] . "'><i class=\"fa fa-lg fa-times\" aria-hidden=\"true\"></i></a> <a href='infosUtilisateur.html.php?id=".$utilisateur['id'] . "'> <i class=\"fa fa-lg fa-pencil-square-o\" aria-hidden=\"true\"></i></a></td></tr>";
 
             }
             echo '</table>';
@@ -42,7 +42,3 @@ include('modeleUtilisateurs.php');
     </div>
 </div>
 <?php include('includes/footer.php'); ?>
-</div>
-
-</body>
-</html>

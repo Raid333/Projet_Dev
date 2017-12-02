@@ -15,3 +15,7 @@ h1.page-header {
 .footer {
     width: 100%;
 }
+.inputObligatoire:after {
+    content: "*";
+    color: red;
+}
