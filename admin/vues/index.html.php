@@ -1,14 +1,14 @@
 <?php
 session_start();
-include('includes/header.php');
+include('../includes/header.php');
 if (!isset($_SESSION['login'])) {
     header('Location: log.html.php');
     exit();
 }
 
 //test
-include('modeleUtilisateurs.php');
-include ('pager.html.php');
+include('../traitements/modeleUtilisateurs.php');
+include('../traitements/pager.html.php');
 ?>
 
 <div class="container-fluid main-container">
@@ -46,4 +46,4 @@ include ('pager.html.php');
         </div>
     </div>
 </div>
-<?php include('includes/footer.php'); ?>
+<?php include('../includes/footer.php'); ?>

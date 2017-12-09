@@ -8,7 +8,7 @@
 
 
 function getPager($valid) {
-    include ('includes/pdo.php');
+    include('../includes/pdo.php');
     $messagesParPage = 3;
     if ($valid == "") {
         $rq = "SELECT COUNT(*) AS total FROM utilisateurs";

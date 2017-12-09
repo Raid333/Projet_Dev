@@ -1,7 +1,7 @@
 <?php
 session_start();
-include('includes/header.php');
-include('modeleUtilisateurs.php');
+include('../includes/header.php');
+include('../traitements/modeleUtilisateurs.php');
 $id = $_GET['id'];
 $utilisateur = getUtilisateur($id);
 //RETRANSMETTRE LES ID SI ERREUR DANS LES CHAMPS
@@ -21,7 +21,7 @@ $utilisateur = getUtilisateur($id);
             </div>
             <div class="panel-body">
                 <?php if (isset($_GET['error'])){echo '<span style="color:red">Problème dans les champs !</span>';}?>
-                <form method="post" action="traitement/modifCdt.php">
+                <form method="post" action="../traitements/modifCdt.php">
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label class="inputObligatoire" for="inputEmail4">E-mail</label>
@@ -44,7 +44,7 @@ $utilisateur = getUtilisateur($id);
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-2">
-                                <label for="inputCity">Civilité</label>
+                                <label for="inputCity"><br>Civilité</label>
                                 <input class="form-control" id="disabledInput" type="text" value="<?php echo $utilisateur['civilite'];?>" disabled>
                             </div>
                             <div class="form-group col-md-2">
@@ -67,4 +67,4 @@ $utilisateur = getUtilisateur($id);
         </div>
     </div>
 
-    <?php include('includes/footer.php');?>
+    <?php include('../includes/footer.php');?>

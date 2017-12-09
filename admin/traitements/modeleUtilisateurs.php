@@ -8,7 +8,7 @@
 
 function getUtilisateurs($valid)
 {
-    include("includes/pdo.php");
+    include("../includes/pdo.php");
 
     $messagesParPage = 3;
     if ($valid == "") {
@@ -55,7 +55,7 @@ function getUtilisateurs($valid)
 function getUtilisateur($id)
 {
     // A FAIRE !!!
-    require('includes/pdo.php');
+    require('../includes/pdo.php');
     $sql = "SELECT * FROM utilisateurs WHERE id = :id";
     $prep = $pdo->prepare($sql);
     $prep->bindValue(':id', $id, PDO::PARAM_INT);

@@ -12,10 +12,10 @@ const ADMIN_PASSWORD = "password";
 if ($_POST['login'] == ADMIN_LOGIN AND $_POST['password'] == ADMIN_PASSWORD) {
     // $_SESSION['login'] = true;
     $_SESSION['login'] = $_POST['login'];
-    header('Location: ../index.html.php');
+    header('Location: ../vues/index.html.php');
     exit();
 } else {
-    header(('Location: ../log.html.php?error=1'));
+    header(('Location: ../vues/log.html.php?error=1'));
     exit();
 }
 

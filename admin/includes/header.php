@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/admincss.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/admincss.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -43,7 +43,7 @@
 <!--                        <li class=""><a href="#">Other Link</a></li>-->
 <!--                        <li class=""><a href="#">Other Link</a></li>-->
                         <li class="divider"></li>
-                        <li><a href="logout.php">Deconnexion</a></li>
+                        <li><a href="../traitements/logout.php">Deconnexion</a></li>
                     </ul>
                 </li>
             </ul>

@@ -19,13 +19,13 @@ if (!empty($_POST['adresse']) && !empty($_POST['ville']) && !empty($_POST['email
         $prep->bindValue(':zip', $_POST['zipCode']);
         $prep->bindValue(':id', $_POST['id'], PDO::PARAM_INT);
         $prep->execute();
-        header('Location: ../index.html.php');
+        header('Location: ../vues/index.html.php');
         exit();
     }
 
 catch (Exception $e) {
     die ('Erreur : ' . $e->getMessage());
 }} else {
-    header("Location: ../infosUtilisateur.html.php?error=1&id=".$_POST['id']);
+    header("Location: ../vues/infosUtilisateur.html.php?error=1&id=".$_POST['id']);
     exit();
 }

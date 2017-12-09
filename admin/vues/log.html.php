@@ -1,5 +1,5 @@
 <?php
-include('includes/header.php');
+include('../includes/header.php');
 session_start();
 if (isset($_SESSION['login'])) {
     header('Location: index.html.php');
@@ -13,7 +13,7 @@ if (isset($_SESSION['login'])) {
         <div class="col-md-offset-5 col-lg-offset-6 col-md-4">
             <div class="form-login">
                 <h4>Connexion ADMIN</h4>
-                <form action="traitement/check.php" method="post">
+                <form action="../traitements/check.php" method="post">
                     <?php if (isset($_GET['error']) == 1 ) { echo '<p class="text-danger text-center">Identifiant / Mot de passe incorrect !</p>';}
                     else if (isset($_GET['error']) == 2) { echo '<p class="text-danger text-center">Veuillez bien rentrer votre Identifiant / Mot de passe !</p>';}
                     ?>
@@ -33,4 +33,4 @@ if (isset($_SESSION['login'])) {
 
     </div>
 </div>
-<?php include ('includes/footer.php'); ?>
+<?php include('../includes/footer.php'); ?>
