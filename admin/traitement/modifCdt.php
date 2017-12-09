@@ -26,6 +26,6 @@ if (!empty($_POST['adresse']) && !empty($_POST['ville']) && !empty($_POST['email
 catch (Exception $e) {
     die ('Erreur : ' . $e->getMessage());
 }} else {
-    header('Location: ../infosUtilisateur.html.php?error=1');
+    header("Location: ../infosUtilisateur.html.php?error=1&id=".$_POST['id']);
     exit();
 }

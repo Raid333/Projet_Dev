@@ -3,22 +3,54 @@
  * Created by PhpStorm.
  * User: Alexandre
  * Date: 02/12/2017
-* Time: 10:41
-*/
+ * Time: 10:41
+ */
 
-function getUtilisateurs($valid) {
-    include ("includes/pdo.php");
-    if ($valid == ""){$sql = "SELECT * FROM utilisateurs ORDER BY dateInsci";}else {$sql = "SELECT * FROM utilisateurs WHERE validation = :valid  ORDER BY dateInsci";}
+function getUtilisateurs($valid)
+{
+    include("includes/pdo.php");
+
+    $messagesParPage = 5;
+    $rq = "SELECT COUNT(*) AS total FROM utilisateurs";
+    $prep = $pdo->prepare($rq);
+    $prep->execute();
+    $retour_total = $prep->fetch();
+    $prep->closeCursor();
+    $total = $retour_total['total'];
+
+    $nombreDePages = ceil($total / $messagesParPage);
+
+    if (isset($_GET['page'])) // Si la variable $_GET['page'] existe...
+    {
+        $pageActuelle = intval($_GET['page']);
+
+        if ($pageActuelle > $nombreDePages) // Si la valeur de $pageActuelle (le numéro de la page) est plus grande que $nombreDePages...
+        {
+            $pageActuelle = $nombreDePages;
+        }
+    } else // Sinon
+    {
+        $pageActuelle = 1; // La page actuelle est la n°1
+    }
+
+    $premiereEntree = ($pageActuelle - 1) * $messagesParPage;
+
+    if ($valid == "") {
+        $sql = "SELECT * FROM utilisateurs ORDER BY dateInsci DESC LIMIT $premiereEntree, $messagesParPage";
+    } else {
+        $sql = "SELECT * FROM utilisateurs WHERE validation = :valid  ORDER BY dateInsci DESC LIMIT $premiereEntree, $messagesParPage";
+    }
     $prep = $pdo->prepare($sql);
-    $prep->bindValue(':valid', $valid, PDO::PARAM_INT );
+    $prep->bindValue(':valid', $valid, PDO::PARAM_INT);
     $prep->execute();
     $utilisateurs = $prep->fetchAll();
     return $utilisateurs;
 }
 
-function getUtilisateur($id) {
+function getUtilisateur($id)
+{
     // A FAIRE !!!
-    require ('includes/pdo.php');
+    require('includes/pdo.php');
     $sql = "SELECT * FROM utilisateurs WHERE id = :id";
     $prep = $pdo->prepare($sql);
     $prep->bindValue(':id', $id, PDO::PARAM_INT);
@@ -27,7 +59,8 @@ function getUtilisateur($id) {
     return $utilisateur;
 }
 
-function getCouleur ($valid) {
+function getCouleur($valid)
+{
     switch ($valid) {
         case 0:
             $couleur = 'warning';

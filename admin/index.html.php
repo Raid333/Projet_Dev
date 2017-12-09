@@ -8,6 +8,7 @@ if (!isset($_SESSION['login'])) {
 
 //test
 include('modeleUtilisateurs.php');
+include ('pager.html.php');
 ?>
 
 <div class="container-fluid main-container">
@@ -33,10 +34,14 @@ include('modeleUtilisateurs.php');
                     <tr><th>Nom</th><th>Prénom</th><th>Adresse</th><th>Date d'inscription</th><th>Actions</th></tr>";
             foreach ($utilisateurs as $utilisateur) {
                 $couleur = getCouleur($utilisateur['validation']);
-                echo "<tr class='$couleur'><td>" . $utilisateur['nom'] . "</td><td>" . $utilisateur['prenom'] . "</td><td>" . $utilisateur['adresse'] . "</td><td>" . $utilisateur['dateInsci'] . "</td><td ><a href='traitement/action.php?status=1&id=" . $utilisateur['id'] . "'><i class=\"fa fa-lg fa-check\" aria-hidden=\"true\"></i></a> <a href='traitement/action.php?status=2&id=" . $utilisateur['id'] . "'><i class=\"fa fa-lg fa-times\" aria-hidden=\"true\"></i></a> <a href='infosUtilisateur.html.php?id=".$utilisateur['id'] . "'> <i class=\"fa fa-lg fa-pencil-square-o\" aria-hidden=\"true\"></i></a></td></tr>";
-
+                if ($utilisateur['validation'] == 0) {
+                    echo "<tr class='$couleur'><td>" . $utilisateur['nom'] . "</td><td>" . $utilisateur['prenom'] . "</td><td>" . $utilisateur['adresse'] . "</td><td>" . $utilisateur['dateInsci'] . "</td><td> <a href='traitement/action.php?status=1&id=" . $utilisateur['id'] . "'><i class=\"fa fa-lg fa-check\" aria-hidden=\"true\"></i></a> <a href='traitement/action.php?status=2&id=" . $utilisateur['id'] . "'><i class=\"fa fa-lg fa-times\" aria-hidden=\"true\"></i></a> <a href='infosUtilisateur.html.php?id=" . $utilisateur['id'] . "'> <i class=\"fa fa-lg fa-pencil-square-o\" aria-hidden=\"true\"></i></a></td></tr>";
+                } else {
+                    echo "<tr class='$couleur'><td>" . $utilisateur['nom'] . "</td><td>" . $utilisateur['prenom'] . "</td><td>" . $utilisateur['adresse'] . "</td><td>" . $utilisateur['dateInsci'] . "</td><td> <a href='infosUtilisateur.html.php?id=" . $utilisateur['id'] . "'> <i class=\"fa fa-lg fa-pencil-square-o\" aria-hidden=\"true\"></i></a></td></tr>";
+                }
             }
             echo '</table>';
+            getPager(2,1);
             ?>
         </div>
     </div>
