@@ -7,11 +7,16 @@
  */
 
 
-function getPager() {
+function getPager($valid) {
     include ('includes/pdo.php');
-    $messagesParPage = 1;
-    $rq = "SELECT COUNT(*) AS total FROM utilisateurs";
+    $messagesParPage = 3;
+    if ($valid == "") {
+        $rq = "SELECT COUNT(*) AS total FROM utilisateurs";
+    } else {
+        $rq = "SELECT COUNT(*) AS total FROM utilisateurs WHERE validation = :valid";
+    }
     $prep = $pdo->prepare($rq);
+    $prep->bindValue(':valid', $valid, PDO::PARAM_INT);
     $prep->execute();
     $retour_total = $prep->fetch();
     $prep->closeCursor();
@@ -40,7 +45,7 @@ function getPager() {
         }
         else //Sinon...
         {
-            echo ' <a href="pager.html.php?page='.$i.'">'.$i.'</a> ';
+            echo ' <a href="index.html.php?status='.$valid.'&page='.$i.'">'.$i.'</a> ';
         }
     }
     echo '</p>';

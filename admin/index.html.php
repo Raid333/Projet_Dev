@@ -41,7 +41,7 @@ include ('pager.html.php');
                 }
             }
             echo '</table>';
-            getPager(2,1);
+            getPager($valide);
             ?>
         </div>
     </div>
