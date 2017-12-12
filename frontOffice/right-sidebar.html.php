@@ -14,7 +14,7 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
-	<body class="no-sidebar">
+	<body class="right-sidebar">
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -22,7 +22,7 @@
 					<div id="header" class="container">
 
 						<!-- Logo -->
-							<h1 id="logo"><a href="index.html">Telephasic</a></h1>
+							<h1 id="logo"><a href="index.html.php">Telephasic</a></h1>
 
 						<!-- Nav -->
 							<nav id="nav">
@@ -45,9 +45,9 @@
 											<li><a href="#">Veroeros feugiat</a></li>
 										</ul>
 									</li>
-									<li><a href="left-sidebar.html">Left Sidebar</a></li>
-									<li class="break"><a href="right-sidebar.html">Right Sidebar</a></li>
-									<li><a href="no-sidebar.html">No Sidebar</a></li>
+									<li><a href="left-sidebar.html.php">Left Sidebar</a></li>
+									<li class="break"><a href="right-sidebar.html.php">Right Sidebar</a></li>
+									<li><a href="no-sidebar.html.php">No Sidebar</a></li>
 								</ul>
 							</nav>
 
@@ -57,34 +57,68 @@
 			<!-- Main -->
 				<div class="wrapper">
 					<div class="container" id="main">
+						<div class="row 150%">
+							<div class="8u 12u(narrower)">
 
-						<!-- Content -->
-							<article id="content">
-								<header>
-									<h2>No Sidebar</h2>
-									<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit
-									dolor neque semper.</p>
-								</header>
-								<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-								<p>Ut sed tortor luctus, gravida nibh eget, volutpat odio. Proin rhoncus, sapien
-								mollis luctus hendrerit, orci dui viverra metus, et cursus nulla mi sed elit. Vestibulum
-								condimentum, mauris a mattis vestibulum, urna mauris cursus lorem, eu fringilla lacus
-								ante non est. Nullam vitae feugiat libero, eu consequat sem. Proin tincidunt neque
-								eros. Duis faucibus blandit ligula, mollis commodo risus sodales at. Sed rutrum et
-								turpis vel blandit. Nullam ornare congue massa, at commodo nunc venenatis varius.
-								Praesent mollis nisi at vestibulum aliquet. Sed sagittis congue urna ac consectetur.</p>
-								<p>Mauris eleifend eleifend felis aliquet ornare. Vestibulum porta velit at elementum
-								gravida nibh eget, volutpat odio. Proin rhoncus, sapien
-								mollis luctus hendrerit, orci dui viverra metus, et cursus nulla mi sed elit. Vestibulum
-								condimentum, mauris a mattis vestibulum, urna mauris cursus lorem, eu fringilla lacus
-								ante non est. Nullam vitae feugiat libero, eu consequat sem. Proin tincidunt neque
-								eros. Duis faucibus blandit ligula, mollis commodo risus sodales at. Sed rutrum et
-								turpis vel blandit. Nullam ornare congue massa, at commodo nunc venenatis varius.
-								Praesent mollis nisi at vestibulum aliquet. Sed sagittis congue urna ac consectetur.</p>
-								<p>Vestibulum pellentesque posuere lorem non aliquam. Mauris eleifend eleifend
-								felis aliquet ornare. Vestibulum porta velit at elementum elementum.</p>
-							</article>
+								<!-- Content -->
+									<article id="content">
+										<header>
+											<h2>Right Sidebar</h2>
+											<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit
+											dolor neque semper magna lorem ipsum.</p>
+										</header>
+										<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+										<p>Ut sed tortor luctus, gravida nibh eget, volutpat odio. Proin rhoncus, sapien
+										mollis luctus hendrerit, orci dui viverra metus, et cursus nulla mi sed elit. Vestibulum
+										condimentum, mauris a mattis vestibulum, urna mauris cursus lorem, eu fringilla lacus
+										ante non est. Nullam vitae feugiat libero, eu consequat sem. Proin tincidunt neque
+										eros. Duis faucibus blandit ligula, mollis commodo risus sodales at. Sed rutrum et
+										turpis vel blandit. Nullam ornare congue massa, at commodo nunc venenatis varius.
+										Praesent mollis nisi at vestibulum aliquet. Sed sagittis congue urna ac consectetur.</p>
+										<p>Mauris eleifend eleifend felis aliquet ornare. Vestibulum porta velit at elementum
+										gravida nibh eget, volutpat odio. Proin rhoncus, sapien
+										mollis luctus hendrerit, orci dui viverra metus, et cursus nulla mi sed elit. Vestibulum
+										condimentum, mauris a mattis vestibulum, urna mauris cursus lorem, eu fringilla lacus
+										ante non est. Nullam vitae feugiat libero, eu consequat sem. Proin tincidunt neque
+										eros. Duis faucibus blandit ligula, mollis commodo risus sodales at. Sed rutrum et
+										turpis vel blandit. Nullam ornare congue massa, at commodo nunc venenatis varius.
+										Praesent mollis nisi at vestibulum aliquet. Sed sagittis congue urna ac consectetur.</p>
+										<p>Vestibulum pellentesque posuere lorem non aliquam. Mauris eleifend eleifend
+										felis aliquet ornare. Vestibulum porta velit at elementum elementum.</p>
+									</article>
 
+							</div>
+							<div class="4u 12u(narrower)">
+
+								<!-- Sidebar -->
+									<section id="sidebar">
+										<section>
+											<header>
+												<h3>Elit sed feugiat</h3>
+											</header>
+											<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur et vel
+											sem sit amet dolor neque semper magna. Lorem ipsum dolor sit amet consectetur et dolore
+											adipiscing elit. Curabitur vel sem sit.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">Magna amet nullam</a></li>
+											</ul>
+										</section>
+										<section>
+											<a href="#" class="image featured"><img src="images/pic07.jpg" alt="" /></a>
+											<header>
+												<h3>Commodo lorem varius</h3>
+											</header>
+											<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur et vel
+											sem sit amet dolor neque semper magna. Lorem ipsum dolor sit amet consectetur et dolore
+											adipiscing elit. Curabitur vel sem sit.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">Ipsum sed dolor</a></li>
+											</ul>
+										</section>
+									</section>
+
+							</div>
+						</div>
 						<div class="row features">
 							<section class="4u 12u(narrower) feature">
 								<div class="image-wrapper first">
