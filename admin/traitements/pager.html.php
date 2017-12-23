@@ -35,20 +35,23 @@ function getPager($valid) {
     {
         $pageActuelle = 1; // La page actuelle est la n°1
     }
-    echo '<p align="center">Page : '; //Pour l'affichage, on centre la liste des pages
-    for($i=1; $i<=$nombreDePages; $i++) //On fait notre boucle
-    {
-        //On va faire notre condition
-        if($i==$pageActuelle) //Si il s'agit de la page actuelle...
+    if ($nombreDePages > 1) {
+        echo '<p align="center">Page : '; //Pour l'affichage, on centre la liste des pages
+        for ($i = 1; $i <= $nombreDePages; $i++) //On fait notre boucle
         {
-            echo ' [ '.$i.' ] ';
+            //On va faire notre condition
+            if ($i == $pageActuelle) //Si il s'agit de la page actuelle...
+            {
+                echo ' [ ' . $i . ' ] ';
+            } else //Sinon...
+            {
+                echo ' <a href="index.html.php?status=' . $valid . '&page=' . $i . '">' . $i . '</a> ';
+            }
         }
-        else //Sinon...
-        {
-            echo ' <a href="index.html.php?status='.$valid.'&page='.$i.'">'.$i.'</a> ';
-        }
+        echo '</p>';
+    }else {
+        return null;
     }
-    echo '</p>';
 }
 
  //Nous allons afficher 5 messages par page.
