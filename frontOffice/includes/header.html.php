@@ -17,7 +17,7 @@
 
             <!-- Logo -->
             <h1 id="logo"><a href="index.html.php">J'aime la techno</a></h1>
-
+<?php echo $_SERVER['PHP_SELF']; ?>
             <!-- Nav -->
             <nav id="nav">
                 <ul>
@@ -39,9 +39,9 @@
                             <li><a href="#">Veroeros feugiat</a></li>
                         </ul>
                     </li>
-                    <li><a href="left-sidebar.html.php">Infos Pratiques</a></li>
-                    <li class="break"><a href="right-sidebar.html.php">S'inscrire</a></li>
-                    <li><a href="no-sidebar.html.php">Line-Up</a></li>
+                    <li class="opener <?php ?>"><a href="infos.html.php">Infos Pratiques</a></li>
+                    <li class="break opener"><a href="inscription.html.php">S'inscrire</a></li>
+                    <li class="opener "><a href="lineup.html.php">Line-Up</a></li>
                 </ul>
             </nav>
 

@@ -1,4 +1,4 @@
-<?php include ('includes/header.html'); ?>
+<?php include('includes/header.html.php'); ?>
 					<!-- Hero -->
 						<section id="hero" class="container" style="margin-top: 40px">
 							<header>
@@ -147,7 +147,7 @@
 							</section>
 						</div>
 					</div>
-                    <?php include ('includes/footer.html'); ?>
+                    <?php include('includes/footer.html.php'); ?>
 				</div>
 
 		</div>

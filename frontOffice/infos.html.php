@@ -1,4 +1,4 @@
-<?php include ('includes/header.html'); ?>
+<?php include('includes/header.html.php'); ?>
 <script>
     function initMap() {
         var uluru = {lat: 48.8778, lng: 2.2735};
