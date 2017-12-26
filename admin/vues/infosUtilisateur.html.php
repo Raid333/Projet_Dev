@@ -61,7 +61,7 @@ $utilisateur = getUtilisateur($id);
                             Sauvegarder
                         </button>
                         <a class="btn btn-default pull-right" style="margin-top: 60px" href="javascript:history.back()">Retour</a>
-
+                    <a class="pull-right" target="_blank" style="margin-top: 60px" href='../traitements/billet.php?user=".<?php $utilisateur['id']; ?>."'>Générer le billet</a>
                 </form>
             </div>
         </div>
