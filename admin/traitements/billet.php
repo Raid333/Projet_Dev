@@ -9,7 +9,7 @@
 require('../fpdf181/fpdf.php');
 require ('../includes/pdo.php');
 require('modeleUtilisateurs.php');
-
+//Récupération des infos clients et affichage sur le pdf
 $id = $_GET['user'];
 $user = getUtilisateur($id);
 
@@ -108,17 +108,26 @@ class PDF_EAN13 extends FPDF
 
 // Instanciation de la classe dérivée
 
+if ($user['codeBarre'] == 0) {
+    $codeBarre = rand(000000000000, 999999999999);
+    $rq = "UPDATE utilisateurs SET codeBarre = $codeBarre WHERE id = $id";
+    $pdo->query($rq);
+} else {
+    $codeBarre = $user['codeBarre'];
+}
+
 $pdf=new PDF_EAN13();
 $pdf->AddPage('L','A4');
+$pdf->Image('logo.jpg',240,6,50);
 $pdf->SetFont('Arial','B',25);
-$pdf->Cell(110);
-//$pdf->Cell(50,10,'"J\'aime la techno"',0);
-$pdf->MultiCell(0,5,'"Jaime la techno"', 0,'C');
-$pdf->Cell(100, 10, $user['nom'], 0, 1);
-$pdf->Cell(100, 10, $user['prenom'], 0, 1);
-$pdf->Cell(100, 10, $user['adresse'], 0, 1);
+$pdf->Cell(100,10,'"J\'aime la techno"',1, 2,'C');
+$pdf->SetFont('Arial',"",18);
+$pdf->Cell(100,10,'Ile des Impressionistes | 78400 Chatou',0, 2,'L');
+$pdf->Cell(100,10,'Du 25/08 au 30/08',0, 1,'L');
+$pdf->SetFont('Arial',"",18);
+$pdf->Cell(0,50,$user['nom'] . " " . $user['prenom'],0, 1,'L');
+$pdf->SetFont('Arial','B',15);
+$pdf->Cell(0,0,"1 personne",0, 1,'L');
 
-$pdf->Image('logo.jpg',10,6,50);
-$codeBarre = rand(000000000000,999999999999);
-$pdf->EAN13(250,160,$codeBarre);
-$pdf->Output();
+$pdf->EAN13(250, 160, $codeBarre);
+$pdf->Output('I',$user['nom'] . " " . $user['prenom']);

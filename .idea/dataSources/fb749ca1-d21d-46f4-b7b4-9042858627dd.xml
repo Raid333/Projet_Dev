@@ -5268,10 +5268,16 @@
       <Position>11</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>&apos;current_timestamp()&apos;</DefaultExpression>
+      <DefaultExpression>&apos;&apos;&apos;0000-00-00&apos;&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="1193" parent="404" name="PRIMARY">
+    <column id="1193" parent="404" name="codeBarre">
+      <Position>12</Position>
+      <DataType>varchar(15)|0</DataType>
+      <DefaultExpression>&apos;&apos;&apos;0&apos;&apos;&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="1194" parent="404" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
