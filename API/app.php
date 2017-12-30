@@ -70,9 +70,9 @@ $app->get('/users/{id}', function ($id) use ($app) {
         return $app->json($error, 404);
     }
 
-    $name = $user['login'];
-
-    return $app->json($name);
+    //echo "Normal : ",  json_encode($user);
+    return "Normal : ".  json_encode($user);
+    //$app->json($name);
 });
 
 $app->run();
