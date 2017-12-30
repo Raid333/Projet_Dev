@@ -10,6 +10,7 @@
 .idea/jsLibraryMappings.xml
 .idea/admin.iml
 .idea/modules.xml
+.DS_Store
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
