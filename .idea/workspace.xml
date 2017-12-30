@@ -2,8 +2,146 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee9b0382-1bfa-454b-a7e1-1f16caae3149" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/API/index.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/.idea/admin.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/FAQ.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/changelog.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/__construct.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/acceptpagebreak.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/addfont.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/addlink.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/addpage.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/aliasnbpages.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/cell.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/close.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/error.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/footer.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/getpageheight.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/getpagewidth.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/getstringwidth.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/getx.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/gety.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/header.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/image.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/index.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/line.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/link.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/ln.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/multicell.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/output.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/pageno.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/rect.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/setauthor.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/setautopagebreak.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/setcompression.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/setcreator.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/setdisplaymode.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/setdrawcolor.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/setfillcolor.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/setfont.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/setfontsize.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/setkeywords.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/setleftmargin.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/setlinewidth.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/setlink.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/setmargins.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/setrightmargin.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/setsubject.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/settextcolor.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/settitle.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/settopmargin.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/setx.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/setxy.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/sety.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/text.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/doc/write.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/font/courier.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/font/courierb.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/font/courierbi.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/font/courieri.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/font/helvetica.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/font/helveticab.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/font/helveticabi.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/font/helveticai.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/font/symbol.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/font/times.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/font/timesb.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/font/timesbi.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/font/timesi.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/font/zapfdingbats.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/fpdf.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/fpdf.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/install.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/license.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/cp1250.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/cp1251.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/cp1252.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/cp1253.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/cp1254.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/cp1255.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/cp1257.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/cp1258.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/cp874.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/iso-8859-1.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/iso-8859-11.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/iso-8859-15.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/iso-8859-16.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/iso-8859-2.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/iso-8859-4.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/iso-8859-5.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/iso-8859-7.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/iso-8859-9.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/koi8-r.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/koi8-u.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/makefont.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/makefont/ttfparser.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/20k_c1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/20k_c2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/calligra.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/calligra.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/calligra.z" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/index.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/makefont.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/pays.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/tuto1.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/tuto1.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/tuto2.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/tuto2.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/tuto3.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/tuto3.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/tuto4.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/tuto4.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/tuto5.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/tuto5.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/tuto6.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/tuto6.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/tuto7.htm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/fpdf181/tutorial/tuto7.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/footer.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/header.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/pdo.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/styles/admincss.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/styles/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/table.sql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/traitements/action.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/traitements/billet.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/traitements/check.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/traitements/logo.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/traitements/logout.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/traitements/modeleUtilisateurs.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/traitements/modifCdt.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/traitements/pager.html.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/vues/index.html.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/vues/infosUtilisateur.html.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/vues/log.html.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/frontOffice/.idea/frontOffice.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/frontOffice/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/frontOffice/.idea/workspace.xml" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,112 +187,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="infosUtilisateur.html.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/vues/infosUtilisateur.html.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="64" column="106" lean-forward="false" selection-start-line="64" selection-start-column="106" selection-end-line="64" selection-end-column="106" />
-              <folding>
-                <marker date="1514464738276" expanded="true" signature="716:725" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utilisateurs" pinned="false" current-in-tab="false">
-        <entry file="das://table:/a805a858/fb749ca1-d21d-46f4-b7b4-9042858627dd/siteevent.utilisateurs">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/vues/index.html.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-              <folding>
-                <marker date="1514310898241" expanded="true" signature="1216:1332" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/includes/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="43" column="72" lean-forward="false" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
+            <state relative-caret-position="90">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="billet.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/traitements/billet.php">
+      <file leaf-file-name="tpAPI.html.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Documents/www/WebServices/tpAPI.html.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
-              <caret line="129" column="14" lean-forward="false" selection-start-line="129" selection-start-column="14" selection-end-line="129" selection-end-column="14" />
-              <folding>
-                <marker date="1514464517231" expanded="true" signature="3550:3608" ph="UPDATE utilisateurs... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utilisateurs" pinned="false" current-in-tab="false">
-        <entry file="das://src:table:/a805a858/fb749ca1-d21d-46f4-b7b4-9042858627dd/siteevent.utilisateurs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="345">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="table.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/table.sql">
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/Documents/www/tp_serveur/app.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="405">
+              <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fb749ca1-d21d-46f4-b7b4-9042858627dd/console.sql">
+      <file leaf-file-name="apirest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Documents/www/WebServices/apirest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="61" lean-forward="true" selection-start-line="0" selection-start-column="61" selection-end-line="0" selection-end-column="61" />
+            <state relative-caret-position="45">
+              <caret line="8" column="61" lean-forward="true" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="action.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/traitements/action.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-              <folding>
-                <marker date="1514311000796" expanded="true" signature="152:211" ph="UPDATE utilisateurs... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -217,35 +285,6 @@
               <item name="Projet_Dev" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet_Dev" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="Projet_Dev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet_Dev" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet_Dev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet_Dev" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="fpdf181" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet_Dev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet_Dev" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="includes" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet_Dev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet_Dev" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="traitements" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Projet_Dev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet_Dev" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vues" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -296,7 +335,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14347000" />
+    <option name="totallyTimeSpent" value="15180000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -347,13 +386,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
           <caret line="33" column="37" lean-forward="false" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
-          <folding>
-            <marker date="1514309826306" expanded="true" signature="230:272" ph="SELECT COUNT... utilisateurs" />
-            <marker date="1514309826306" expanded="true" signature="303:371" ph="SELECT COUNT... utilisateurs" />
-            <marker date="1514309826306" expanded="true" signature="1167:1241" ph="SELECT * FRO... utilisateurs" />
-            <marker date="1514309826306" expanded="true" signature="1289:1390" ph="SELECT * FRO... utilisateurs" />
-            <marker date="1514309826306" expanded="true" signature="1692:1733" ph="SELECT * FRO... utilisateurs" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -369,19 +402,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding>
-            <marker date="1514311000796" expanded="true" signature="152:211" ph="UPDATE utilisateurs... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/vues/index.html.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
-          <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-          <folding>
-            <marker date="1514310898241" expanded="true" signature="1216:1332" ph="..." />
-          </folding>
+          <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -412,18 +441,8 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fb749ca1-d21d-46f4-b7b4-9042858627dd/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="61" lean-forward="true" selection-start-line="0" selection-start-column="61" selection-end-line="0" selection-end-column="61" />
+          <caret line="0" column="61" lean-forward="false" selection-start-line="0" selection-start-column="61" selection-end-line="0" selection-end-column="61" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/traitements/billet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="129" column="14" lean-forward="false" selection-start-line="129" selection-start-column="14" selection-end-line="129" selection-end-column="14" />
-          <folding>
-            <marker date="1514464517231" expanded="true" signature="3550:3608" ph="UPDATE utilisateurs... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -431,9 +450,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="554">
           <caret line="64" column="106" lean-forward="false" selection-start-line="64" selection-start-column="106" selection-end-line="64" selection-end-column="106" />
-          <folding>
-            <marker date="1514464738276" expanded="true" signature="716:725" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -466,7 +483,204 @@
     <entry file="file://$PROJECT_DIR$/admin/table.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///private/var/folders/8l/3zhqxh8s3pvfsmk8cvz0hk8m0000gn/T/fz3temp-2/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/traitements/billet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="108" column="36" lean-forward="false" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/table.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/fpdf181/fpdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/traitements/modeleUtilisateurs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="33" column="37" lean-forward="false" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/fpdf181/doc/output.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/traitements/action.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://src:table:/a805a858/fb749ca1-d21d-46f4-b7b4-9042858627dd/siteevent.utilisateurs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/vues/index.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="43" column="72" lean-forward="false" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/fpdf181/fpdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="301" column="13" lean-forward="false" selection-start-line="301" selection-start-column="13" selection-end-line="301" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/fpdf181/fpdf.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fb749ca1-d21d-46f4-b7b4-9042858627dd/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="61" lean-forward="false" selection-start-line="0" selection-start-column="61" selection-end-line="0" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/traitements/billet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="125" column="18" lean-forward="true" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/vues/infosUtilisateur.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="64" column="106" lean-forward="false" selection-start-line="64" selection-start-column="106" selection-end-line="64" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/a805a858/fb749ca1-d21d-46f4-b7b4-9042858627dd/siteevent.utilisateurs">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/fpdf181/fpdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/traitements/modeleUtilisateurs.php" />
+    <entry file="file://$PROJECT_DIR$/admin/fpdf181/doc/output.htm" />
+    <entry file="file://$PROJECT_DIR$/admin/traitements/action.php" />
+    <entry file="file://$PROJECT_DIR$/admin/vues/index.html.php" />
+    <entry file="file://$PROJECT_DIR$/admin/includes/header.php" />
+    <entry file="file://$PROJECT_DIR$/admin/fpdf181/fpdf.php" />
+    <entry file="file://$PROJECT_DIR$/admin/fpdf181/fpdf.css" />
+    <entry file="file://$PROJECT_DIR$/admin/traitements/billet.php" />
+    <entry file="file://$PROJECT_DIR$/admin/vues/infosUtilisateur.html.php" />
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/admin/table.sql" />
+    <entry file="das://table:/a805a858/fb749ca1-d21d-46f4-b7b4-9042858627dd/siteevent.utilisateurs">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://src:table:/a805a858/fb749ca1-d21d-46f4-b7b4-9042858627dd/siteevent.utilisateurs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fb749ca1-d21d-46f4-b7b4-9042858627dd/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="61" lean-forward="false" selection-start-line="0" selection-start-column="61" selection-end-line="0" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/www/WebServices/tpAPI.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/www/WebServices/apirest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="8" column="61" lean-forward="true" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/www/tp_serveur/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
           <folding />
         </state>
       </provider>
