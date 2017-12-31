@@ -8,17 +8,43 @@
 
 
 function getUser ($id) {
-    try  {
-        $strConnection = 'mysql:host=localhost;dbname=testdb';
-        $pdo = new PDO($strConnection, 'root', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));}
-    catch (Exception $e){
-        die ('Erreur : ' . $e->getMessage());
-    }
+    require 'pdo.php';
+    $prep = $pdo->prepare("SELECT * FROM utilisateurs WHERE id = :id");
+    $prep->bindValue(':id', $id, PDO::PARAM_INT);
+    $prep->execute();
+    $user = $prep->fetch(PDO::FETCH_ASSOC);
 
-    $prep = $pdo->prepare("SELECT * FROM users WHERE id = :id");
+    return $user;
+}
+
+function getUsers() {
+    require 'pdo.php';
+    $prep = $pdo->prepare('SELECT * FROM utilisateurs');
+    $prep->execute();
+    $users = $prep->fetchAll(PDO::FETCH_ASSOC);
+
+    return $users;
+}
+
+function updateUser($id, $statut) {
+    require 'pdo.php';
+    $prep = $pdo->prepare('SELECT validation FROM utilisateurs where id = :id');
     $prep->bindValue(':id', $id, PDO::PARAM_INT);
     $prep->execute();
     $user = $prep->fetch();
+    $prep->closeCursor();
 
-    return $user;
+    if ($user['validation'] != 0) {
+        return false;
+    } else {
+        $prep = $pdo->prepare('UPDATE utilisateurs SET validation = :statut WHERE id = :id');
+        $prep->bindValue(':statut', $statut, PDO::PARAM_INT);
+        $prep->bindValue(':id', $id, PDO::PARAM_INT);
+        $prep->execute();
+        return true;
+    }
+
+
+
+
 }

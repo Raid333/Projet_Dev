@@ -1,5 +1,6 @@
 <?php
 use Illuminate\Database\Capsule\Manager as CapsuleManager;
+use \Symfony\Component\HttpFoundation\Request as Request;
 require_once __DIR__.'/vendor/autoload.php';
 require 'controller.php';
 
@@ -13,7 +14,7 @@ $app->register(
             'default' => [
                 'driver'    => 'mysql',
                 'host'      => 'localhost',
-                'database'  => 'testdb',
+                'database'  => 'siteevent',
                 'username'  => 'root',
                 'password'  => '',
             ]
@@ -21,30 +22,8 @@ $app->register(
     ]
 );
 
-
-//$app->get('/hello/{name}', function($name) use($app) {
-//    return 'Hello '.$app->escape($name);
-//});
-
-//$app->delete('/users', function ($id) {
-//    $user = CapsuleManager::table('users')->where('id', $id)->get();
-//
-//
-//});
-//
-//$app->get('/user/{id}', function($id)
-//{
-//    $user = CapsuleManager::table('users')->where('id', $id)->get();
-//    return json_encode($user);
-//});
-//
-//$app->get('/users', function()
-//{
-//    $user = CapsuleManager::table('users')->get();
-//    return json_encode($user);
-//});
-
-$app->post('/users', function (\Symfony\Component\HttpFoundation\Request $request) use($app) {
+//Ajouter un utilisateur (BONUS)
+$app->post('/create/user', function (Request $request) use($app) {
 
     $data = [
         'login' => $request->get('login'),
@@ -54,25 +33,51 @@ $app->post('/users', function (\Symfony\Component\HttpFoundation\Request $reques
         'country' => $request->get('country'),
     ];
 
-    CapsuleManager::table('users')->insert($data);
+    CapsuleManager::table('utilisateurs')->insert($data);
 
     return new Response('', 201);
 
     //return 'Utilisateur ajouté : ' . $firstname;
 });
 
-$app->get('/users/{id}', function ($id) use ($app) {
+//Récuperer les informations sur un utilisateur
+$app->get('/user/{id}', function ($id) use ($app) {
     $user = getUser($id);
 
     if (!$user) {
-        $error = array('message' => 'The user was not found.');
+        $error = array('message' => 'Utilisateur non trouvé');
+
+        //return $app->json($error, 404);
+        return $app->json($user);
+    }
+
+
+    return $app->json($user);
+
+
+});
+
+//Récupérer l'ensemble des utilisateurs présents dans la base
+$app->get('/users', function () use ($app) {
+    $users = getUsers();
+
+    if (!$users) {
+        $error = array('message' => "Les utilisateurs n\'ont pas été trouvé");
 
         return $app->json($error, 404);
     }
 
-    //echo "Normal : ",  json_encode($user);
-    return "Normal : ".  json_encode($user);
-    //$app->json($name);
+    return $app->json($users);
+
+
 });
+
+//A FAIRE : ajouter la possibilité de valider ou de refuser un utilisateur définitivement
+$app->put('/user/{id}', function ($id, $validation) use ($app) {
+    // a faire
+    $validation->get('validation');
+    updateUser($id,$validation);
+});
+
 
 $app->run();
