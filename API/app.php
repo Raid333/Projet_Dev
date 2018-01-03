@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Database\Capsule\Manager as CapsuleManager;
 use \Symfony\Component\HttpFoundation\Request as Request;
+use Symfony\Component\HttpFoundation\Response as Response;
 require_once __DIR__.'/vendor/autoload.php';
 require 'controller.php';
 
@@ -26,18 +27,24 @@ $app->register(
 $app->post('/create/user', function (Request $request) use($app) {
 
     $data = [
-        'login' => $request->get('login'),
-        'password' => $request->get('password'),
-        'firstname' => $request->get('firstname'),
-        'lastname' => $request->get('lastname'),
-        'country' => $request->get('country'),
+        'civilite' => $request->get('civilite'),
+        'nom' => $request->get('nom'),
+        'prenom' => $request->get('prenom'),
+        'adresse' => $request->get('adresse'),
+        'codePostal' => $request->get('codePostal'),
+        'ville' => $request->get('ville'),
+        'dateNaissance' => $request->get('dateNaissance'),
+        'email' => $request->get('email'),
     ];
 
     CapsuleManager::table('utilisateurs')->insert($data);
 
-    return new Response('', 201);
+    //return new Response('', 201);
 
     //return 'Utilisateur ajouté : ' . $firstname;
+    return $app->json('utilisateur bien enregistré', 201);
+
+
 });
 
 //Récuperer les informations sur un utilisateur
@@ -47,8 +54,8 @@ $app->get('/user/{id}', function ($id) use ($app) {
     if (!$user) {
         $error = array('message' => 'Utilisateur non trouvé');
 
-        //return $app->json($error, 404);
-        return $app->json($user);
+        return $app->json($error, 404);
+
     }
 
 
@@ -73,11 +80,12 @@ $app->get('/users', function () use ($app) {
 });
 
 //A FAIRE : ajouter la possibilité de valider ou de refuser un utilisateur définitivement
-$app->put('/user/{id}', function ($id, $validation) use ($app) {
+$app->put('/user/{id}', function ($id, Request $request) use ($app) {
     // a faire
-    $validation->get('validation');
+    $validation = $request->get('validation');
     updateUser($id,$validation);
 });
+
 
 
 $app->run();
