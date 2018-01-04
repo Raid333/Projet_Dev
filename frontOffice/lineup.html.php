@@ -6,11 +6,16 @@
 						<!-- Content -->
 							<article id="content">
 								<header>
-									<h2>No Sidebar</h2>
+									<h2>Artistes présents lors de l'événement !</h2>
+
 									<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit
 									dolor neque semper.</p>
 								</header>
-								<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
+                                <h2>test</h2>
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/376214708&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/376214708&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/376214708&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+                                <a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
 								<p>Ut sed tortor luctus, gravida nibh eget, volutpat odio. Proin rhoncus, sapien
 								mollis luctus hendrerit, orci dui viverra metus, et cursus nulla mi sed elit. Vestibulum
 								condimentum, mauris a mattis vestibulum, urna mauris cursus lorem, eu fringilla lacus
