@@ -34,7 +34,7 @@ function updateUser($id, $statut) {
     $user = $prep->fetch();
     $prep->closeCursor();
 
-    if ($user['validation'] != 0) {
+    if ($user['validation'] != 0 || !isset($user['validation'])) {
         return false;
     } else {
         $prep = $pdo->prepare('UPDATE utilisateurs SET validation = :statut WHERE id = :id');

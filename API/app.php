@@ -24,7 +24,7 @@ $app->register(
 );
 
 //Ajouter un utilisateur (BONUS)
-$app->post('/create/user', function (Request $request) use($app) {
+$app->post('/users', function (Request $request) use($app) {
 
     $data = [
         'civilite' => $request->get('civilite'),
@@ -43,12 +43,10 @@ $app->post('/create/user', function (Request $request) use($app) {
 
     //return 'Utilisateur ajouté : ' . $firstname;
     return $app->json('utilisateur bien enregistré', 201);
-
-
 });
 
 //Récuperer les informations sur un utilisateur
-$app->get('/user/{id}', function ($id) use ($app) {
+$app->get('/users/{id}', function ($id) use ($app) {
     $user = getUser($id);
 
     if (!$user) {
@@ -57,11 +55,7 @@ $app->get('/user/{id}', function ($id) use ($app) {
         return $app->json($error, 404);
 
     }
-
-
     return $app->json($user);
-
-
 });
 
 //Récupérer l'ensemble des utilisateurs présents dans la base
@@ -73,19 +67,20 @@ $app->get('/users', function () use ($app) {
 
         return $app->json($error, 404);
     }
-
     return $app->json($users);
-
-
 });
 
 //A FAIRE : ajouter la possibilité de valider ou de refuser un utilisateur définitivement
-$app->put('/user/{id}', function ($id, Request $request) use ($app) {
+$app->post('/user/{id}', function ($id, Request $request) use ($app) {
     // a faire
     $validation = $request->get('validation');
-    updateUser($id,$validation);
+    $retour = updateUser($id,$validation);
+    if ($retour == false) {
+        return $app->json("problème", 404);
+    }else {
+        return $app->json("succès",200);
+    }
 });
-
 
 
 $app->run();
