@@ -1,3 +1,4 @@
+-- auto-generated definition
 CREATE TABLE utilisateurs
 (
   id            INT AUTO_INCREMENT
@@ -11,7 +12,8 @@ CREATE TABLE utilisateurs
   dateNaissance INT DEFAULT 'NULL'                      NULL,
   email         VARCHAR(255) DEFAULT '''NULL'''         NULL,
   validation    INT DEFAULT '0'                         NOT NULL,
-  dateInsci     DATE DEFAULT '''0000-00-00'''           NOT NULL,
+  dateInsci     DATETIME DEFAULT 'current_timestamp()'  NOT NULL,
   codeBarre     VARCHAR(15) DEFAULT '''0'''             NULL
 )
   ENGINE = InnoDB;
+
