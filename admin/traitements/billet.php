@@ -120,7 +120,7 @@ $pdf=new PDF_EAN13();
 $pdf->AddPage('L','A4');
 $pdf->Image('logo.jpg',240,6,50);
 $pdf->SetFont('Arial','B',25);
-$pdf->Cell(100,10,'"J\'aime la techno"',1, 2,'C');
+$pdf->Cell(100,10,'B-Rave',1, 2,'C');
 $pdf->SetFont('Arial',"",18);
 $pdf->Cell(100,10,'Ile des Impressionistes | 78400 Chatou',0, 2,'L');
 $pdf->Cell(100,10,'Du 25/08 au 30/08',0, 1,'L');
