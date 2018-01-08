@@ -7,5 +7,5 @@
  */
 session_start();
 session_destroy();
-header('Location: ../vues/index.html.php');
+header('Location: ../index.php');
 exit();

@@ -1,14 +1,14 @@
 <?php
 session_start();
-include('../includes/header.php');
+include('includes/header.php');
 if (!isset($_SESSION['login'])) {
-    header('Location: log.html.php');
+    header('Location: vues/log.html.php');
     exit();
 }
 
 //test
-include('../traitements/modeleUtilisateurs.php');
-include('../traitements/pager.html.php');
+include('traitements/modeleUtilisateurs.php');
+include('traitements/pager.html.php');
 ?>
 
 <div class="container-fluid main-container">
@@ -35,9 +35,9 @@ include('../traitements/pager.html.php');
             foreach ($utilisateurs as $utilisateur) {
                 $couleur = getCouleur($utilisateur['validation']);
                 if ($utilisateur['validation'] == 0) {
-                    echo "<tr class='$couleur'><td>" . $utilisateur['nom'] . "</td><td>" . $utilisateur['prenom'] . "</td><td>" . $utilisateur['adresse'] . "</td><td>" . $utilisateur['dateInsci'] . "</td><td> <a href='../traitements/action.php?status=1&id=" . $utilisateur['id'] . "'><i class=\"fa fa-lg fa-check\" aria-hidden=\"true\"></i></a> <a href='../traitements/action.php?status=2&id=" . $utilisateur['id'] . "'><i class=\"fa fa-lg fa-times\" aria-hidden=\"true\"></i></a> <a href='infosUtilisateur.html.php?id=" . $utilisateur['id'] . "'> <i class=\"fa fa-lg fa-pencil-square-o\" aria-hidden=\"true\"></i></a></td></tr>";
+                    echo "<tr class='$couleur'><td>" . $utilisateur['nom'] . "</td><td>" . $utilisateur['prenom'] . "</td><td>" . $utilisateur['adresse'] . "</td><td>" . $utilisateur['dateInsci'] . "</td><td> <a href='traitements/action.php?status=1&id=" . $utilisateur['id'] . "'><i class=\"fa fa-lg fa-check\" aria-hidden=\"true\"></i></a> <a href='traitements/action.php?status=2&id=" . $utilisateur['id'] . "'><i class=\"fa fa-lg fa-times\" aria-hidden=\"true\"></i></a> <a href='vues/infosUtilisateur.html.php?id=" . $utilisateur['id'] . "'> <i class=\"fa fa-lg fa-pencil-square-o\" aria-hidden=\"true\"></i></a></td></tr>";
                 } else {
-                    echo "<tr class='$couleur'><td>" . $utilisateur['nom'] . "</td><td>" . $utilisateur['prenom'] . "</td><td>" . $utilisateur['adresse'] . "</td><td>" . $utilisateur['dateInsci'] . "</td><td> <a href='infosUtilisateur.html.php?id=" . $utilisateur['id'] . "'> <i class=\"fa fa-lg fa-pencil-square-o\" aria-hidden=\"true\"></i></a></td></tr>";
+                    echo "<tr class='$couleur'><td>" . $utilisateur['nom'] . "</td><td>" . $utilisateur['prenom'] . "</td><td>" . $utilisateur['adresse'] . "</td><td>" . $utilisateur['dateInsci'] . "</td><td> <a href='vues/infosUtilisateur.html.php?id=" . $utilisateur['id'] . "'> <i class=\"fa fa-lg fa-pencil-square-o\" aria-hidden=\"true\"></i></a></td></tr>";
                 }
             }
             echo '</table>';
@@ -46,4 +46,4 @@ include('../traitements/pager.html.php');
         </div>
     </div>
 </div>
-<?php include('../includes/footer.php'); ?>
+<?php include('includes/footer.php'); ?>

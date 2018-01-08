@@ -2,7 +2,7 @@
 include('../includes/header.php');
 session_start();
 if (isset($_SESSION['login'])) {
-    header('Location: index.html.php');
+    header('Location: index.php');
     exit();
 }
 

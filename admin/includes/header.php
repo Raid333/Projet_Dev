@@ -24,7 +24,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html.php">
+            <a class="navbar-brand" href="../index.php">
                 Accueil
             </a>
         </div>
@@ -43,7 +43,7 @@
 <!--                        <li class=""><a href="#">Other Link</a></li>-->
 <!--                        <li class=""><a href="#">Other Link</a></li>-->
                         <li class="divider"></li>
-                        <li><a href="../traitements/logout.php">Deconnexion</a></li>
+                        <li><a href="traitements/logout.php">Deconnexion</a></li>
                     </ul>
                 </li>
             </ul>

@@ -19,7 +19,7 @@ if (!empty($_POST['adresse']) && !empty($_POST['ville']) && !empty($_POST['email
         $prep->bindValue(':zip', $_POST['zipCode']);
         $prep->bindValue(':id', $_POST['id'], PDO::PARAM_INT);
         $prep->execute();
-        header('Location: ../vues/index.html.php');
+        header('Location: ../index.php');
         exit();
     }
 

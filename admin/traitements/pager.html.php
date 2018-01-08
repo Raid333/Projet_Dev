@@ -8,7 +8,7 @@
 
 
 function getPager($valid) {
-    include('../includes/pdo.php');
+    include('includes/pdo.php');
     $messagesParPage = 3;
     if ($valid == "") {
         $rq = "SELECT COUNT(*) AS total FROM utilisateurs";
@@ -45,7 +45,7 @@ function getPager($valid) {
                 echo ' [ ' . $i . ' ] ';
             } else //Sinon...
             {
-                echo ' <a href="index.html.php?status=' . $valid . '&page=' . $i . '">' . $i . '</a> ';
+                echo ' <a href="index.php?status=' . $valid . '&page=' . $i . '">' . $i . '</a> ';
             }
         }
         echo '</p>';

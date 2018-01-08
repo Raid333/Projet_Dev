@@ -15,5 +15,5 @@ $prep->bindValue(':status', $_GET['status'], PDO::PARAM_INT);
 $prep->execute();
 
 
-header('Location: ../vues/index.html.php');
+header('Location: ../index.php');
 exit();
